@@ -31,7 +31,7 @@
 
 % Environment to draw a fretboard to put chords on
 \newenvironment{chorder}[1][1]{%
-    \begin{tikzpicture}
+    \begin{tikzpicture}[inner sep=1]
         \begin{scope}[xscale=#1, yscale=0.666*#1, very thick, font=\footnotesize]
             \foreach \x in {0.5,...,3.5}{
                 \draw[guitargrey] (-0.5,\x) -- (11.5,\x);
