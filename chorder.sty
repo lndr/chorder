@@ -1,33 +1,8 @@
 \ProvidesPackage{chorder}[2025]
 
 \usepackage{tikz}
-\usetikzlibrary{decorations.markings}
 
 \definecolor{guitargrey}{rgb}{0.666,0.666,0.666}
-
-% Style to create a colour gradient along a path
-\tikzset{colourpath/.style n args={3}{
-    postaction={
-        decorate,
-        decoration={
-            markings,
-            mark=between positions 0 and \pgfdecoratedpathlength step 0.5pt with {
-                \pgfmathsetmacro\myval{
-                    multiply(
-                        divide(
-                            \pgfkeysvalueof{/pgf/decoration/mark info/distance from start},
-                            \pgfdecoratedpathlength
-                        ),
-                        100
-                    )
-                }
-                \pgfsetfillcolor{#3!\myval!#2}
-                \pgfpathcircle{\pgfpointorigin}{#1}
-                \pgfusepath{fill}
-            }
-        }
-    }
-}}
 
 % Environment to draw a fretboard to put chords on
 \newenvironment{chorder}[1][1]{%
