@@ -1,0 +1,140 @@
+\documentclass[DIV=12]{scrreprt}
+\usepackage{chorder}
+\usepackage{musicography}
+
+\renewcommand{\familydefault}{\sfdefault}
+\definecolor{orange}{HTML}{FF7300}
+\definecolor{blue}{HTML}{1570CC}
+\definecolor{green}{HTML}{12BD63}
+\definecolor{red}{HTML}{D90100}
+
+\begin{document}
+\centering
+
+\section*{Down Under}
+\begin{chorder}
+    \node (Intro) at (8, 2.25) {Intro};
+    \node (Cm) at (8,1) {Cm};
+    \node (Bb) at (6,1) {B\fl};
+    \node (Ab) at (4,1) {A\fl};
+    \node (Chorus) at (6, 3.25) {Chorus};
+    \node (Eb) at (6,2) {E\fl};
+
+    \draw[orange, -stealth] (Intro) to (Cm);
+    \draw[orange!75!blue, -stealth, transform canvas={yshift=2}] (Cm) to (Bb);
+    \draw[orange!50!blue, -stealth, transform canvas={yshift=-2}] (Bb) to (Cm);
+    \draw[orange!25!blue, -stealth] (Cm) to[bend left] (Ab);
+    \draw[blue, -circle] (Ab) to (Bb);
+    \draw[orange, -stealth] (Chorus) to (Eb);
+    \draw[orange!75!blue, -stealth] (Eb) to (Bb);
+\end{chorder}
+
+\section*{Holiday}
+\begin{chorder}
+    \node (Intro) at (8, 0.75) {Intro};
+    \node (Fm) at (8,2) {Fm};
+    \node (Db) at (4,2) {D\fl};
+    \node (Ab) at (11,2) {A\fl};
+    \node (Eb) at (6,2) {E\fl};
+
+    \draw[orange, -stealth] (Intro) to (Fm);
+    \draw[orange!66!blue, -stealth] (Fm) to[bend right] (Db);
+    \draw[orange!33!blue, -stealth] (Db) to[bend right] (Ab);
+    \draw[blue, -circle] (Ab) to[bend right] (Eb);
+\end{chorder}
+
+\begin{chorder}
+    \node (Verse) at (8, 0.75) {Verse};
+    \node (F5h) at (8,2) {F5};
+    \node (Chorus) at (1, 2.25) {Chorus};
+    \node (F5l) at (1,1) {F5};
+    \node (Db5) at (4,2) {D\fl5};
+    \node (Ab5) at (4,1) {A\fl5};
+    \node (Eb5) at (6,2) {E\fl5};
+    \node (C5) at (3,2) {C5};
+
+    \draw[orange, -stealth] (Verse) to (F5h);
+    \draw[orange!66!blue, -stealth] (F5h) to[bend right] (Db5);
+    \draw[orange!33!blue, -stealth] (Db5) to (Ab5);
+    \draw[blue, -circle] (Ab5) to (Eb5);
+    \draw[blue, -circle] (Ab5) to (C5);
+
+    \draw[orange, -stealth] (Chorus) to (F5l);
+    \draw[orange!66!blue, -stealth] (F5l) to[bend right] (Db5);
+\end{chorder}
+
+\begin{chorder}
+    \node (Inter) at (1, 2.25) {Interlude};
+    \node (F5l) at (1,1) {F5};
+    \node (Db5) at (4,2) {D\fl5};
+    \node (Ab5) at (4,1) {A\fl5};
+    \node (Bb5) at (6,1) {B\fl5};
+    \node (Eb5) at (6,2) {E\fl5};
+    \node (C5) at (8,1) {C5};
+    \node (F5h) at (8,2) {F5};
+
+    \draw[orange, -stealth] (Chorus) to (F5l);
+    \draw[orange!80!blue, -stealth] (F5l) to (Ab5);
+    \draw[orange!60!blue, -stealth] (Ab5) to (Db5);
+    \draw[orange!40!blue, -stealth] (Db5) to (Bb5);
+    \draw[orange!20!blue, -stealth] (Bb5) to (Eb5);
+    \draw[blue, -circle, transform canvas={yshift=2}] (Eb5) to (C5);
+
+    \draw[orange!52!blue, -stealth] (Ab5) to (Eb5);
+    \draw[orange!26!blue, -stealth, transform canvas={yshift=-2}] (Eb5) to (C5);
+    \draw[blue, -circle] (C5) to (F5h);
+\end{chorder}
+
+\section*{Mickey Mouse in Moscow}
+\begin{chorder}
+    \node (Verse) at (3, 3.25) {Verse};
+    \node (Cm) at (3,2) {Cm};
+    \node (Fm) at (1,1) {Fm};
+    \node (G) at (3,1) {G};
+
+    \draw[orange, -stealth] (Verse) to (Cm);
+    \draw[orange!50!blue, -stealth] (Cm) to (Fm);
+    \draw[blue, -circle] (Fm) to (G);
+\end{chorder}
+
+\begin{chorder}
+    \node (Chorus) at (6, 0.75) {Chorus};
+    \node (Cm) at (3,2) {Cm};
+    \node (Fm) at (1,1) {Fm};
+    \node (G) at (3,1) {G};
+    \node (Eb) at (6,2) {E\fl};
+    \node (Ab) at (4,1) {A\fl};
+    \node (Bb) at (1,2) {B\fl};
+
+    \draw[orange, -stealth] (Chorus) to (Eb);
+    \draw[orange!88!blue, -stealth, transform canvas={yshift=2}] (Eb) to (Ab);
+    \draw[orange!77!blue, -stealth, transform canvas={yshift=-2}] (Ab) to (Eb);
+    \draw[orange!66!blue, -stealth] (Eb) to[bend right] (Bb);
+    \draw[orange!55!blue, -stealth] (Bb) to (G);
+    \draw[orange!44!blue, -stealth] (G) to (Cm);
+    \draw[orange!33!blue, -stealth] (Cm) to (Fm);
+    \draw[orange!22!blue, -stealth] (Fm) to[bend right=50] (Eb);
+    \draw[orange!11!blue, -stealth] (Eb) to[bend right=20] (G);
+    \draw[blue, -circle] (G) to (Cm);
+\end{chorder}
+
+\section*{Sharp Dressed Girl}
+\begin{chorder}
+    \node (Verse) at (8, 0.75) {Verse};
+    \node (F) at (8,2) {F};
+    \node (Dm) at (5,2) {Dm};
+    \node (Chorus) at (1, 3.25) {Chorus};
+    \node (Bb) at (1,2) {B\fl};
+    \node (C) at (3,2) {C};
+    \node (G) at (3,1) {G};
+
+    \draw[orange, -stealth] (Verse) to (F);
+    \draw[blue, -circle] (F) to (Dm);
+
+    \draw[green, -stealth] (Chorus) to (Bb);
+    \draw[green!50!red, -stealth] (Bb) to (C);
+    \draw[red, -circle] (C) to (Dm);
+    \draw[red, -circle] (C) to (G);
+\end{chorder}
+
+\end{document}
